@@ -1,0 +1,11 @@
+{
+  "name": "ui_unit",
+  "description": "UI Unit Tests",
+  "author": "lmangani",
+  "dependencies": {
+    "casperjs": "*"
+  },
+  "config": {
+    "unsafe-perm":true
+  }
+}
