@@ -13,6 +13,13 @@ var casper = require('casper').create({
     }
 });
 
+/*
+var fs = require('fs');
+var referenceImage = fs.read('./reference.png');
+var newImage = fs.read('./new_reference.png');
+this.test.assert(newImage == referenceImage);
+*/
+
 // set the viewport size to include all our page content.
 casper.options.viewportSize = {width: 1200, height: 600};
 
@@ -31,10 +38,10 @@ var url = 'http://h5.sipcapture.io/#/login';
 casper.start(url, function() {
     // search for 'casperjs' from google form
     console.log("page loaded");
-    this.test.assertExists('form', 'Login form is found');
+    this.test.assertExists('form', 'H5 Login form is found');
     this.fill('form', { 
         username: 'admin', 
-        password:  'test1234'
+        password: 'test1234'
     }, true);
     this.click('#login_buton');
 });
@@ -47,6 +54,7 @@ casper.then(function() {
    this.wait(2000, function() {
 	    // capture the entire page.
 	    casper.capture("homer5.png");
+	    	// perform default search
 		this.click('.btn-primary');
 		   this.wait(2000, function() {
 			    // capture the entire page.
