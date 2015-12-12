@@ -33,7 +33,7 @@ casper.on("page.error", function(msg, trace) {
     this.echo("Page Error: " + msg, "ERROR");
 });
 
-var url = 'http://h5.sipcapture.io/#/login';
+var url = 'http://127.0.0.1/#/login';
 
 casper.start(url, function() {
     // search for 'casperjs' from google form
