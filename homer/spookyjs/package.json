@@ -8,5 +8,8 @@
   },
   "config": {
     "unsafe-perm":true
+  },
+  "scripts": {
+    "start": "node test.js"
   }
 }
