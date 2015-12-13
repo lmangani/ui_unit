@@ -1,0 +1,12 @@
+{
+  "name": "homer_ui_unit",
+  "description": "Homer UI Unit Tests",
+  "author": "lmangani",
+  "dependencies": {
+    "casperjs": "*",
+    "spooky":"*"
+  },
+  "config": {
+    "unsafe-perm":true
+  }
+}
